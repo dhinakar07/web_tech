@@ -1,79 +1,65 @@
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
-.profile-pic {
+.profile-pic{
     margin-top: 5px;
     margin-left: 5px;
 }
-
-.icons img {
+.icons img{
     width: 50px;
     padding: 10px;
 }
-
-.head {
+.head{
     display: flex;
     justify-content: space-between;
     background-color: rgb(226, 13, 226);
 }
-
-.heading {
+.heading{
     margin-top: 80px;
     color: white;
 }
-
-.icons {
+.icons{
     border: 1px solid black;
     height: 50px;
     background-color: white;
     margin: 10px;
 }
-
-.links {
+.links{
     padding: 10px;
     background-color: lightblue;
 }
-
-.links ul {
+.links ul{
     display: flex;
     justify-content: space-between;
     margin: 0 50px;
 }
-
-.links li {
+.links li{
     list-style: none;
 }
-
-.links li a {
+.links li a{
     text-decoration: none;
     color: black;
     font-size: 20px;
 }
-
-.content {
-    /* display: flex; */
-    background-color: rgba(127, 197, 225, 0.879);
+.content{
+    background-color: grey;
     display: inline-block;
     vertical-align: top;
     position: relative;
 }
-
-.para {
+.para{
     float: left;
 }
-
-.para-img img {
+.para-img img{
     float: left;
     height: 100%;
     position: absolute;
     right: 200px;
     width: 40%;
 }
-
-.para {
+.para{
     width: 30%;
     text-align: left;
     border: 2px dotted blue;
@@ -82,141 +68,96 @@
     margin: 0 30px;
     word-spacing: 20px;
 }
-
-.coding img {
-    height: 200px;
+.coding img{
+    height: 200px;  
     padding: 20px;
 }
-
-.coding {
+.coding{
     display: flex;
     justify-content: space-evenly;
     background-color: lightblue;
 }
-
-.text {
+.text{
     position: relative;
 }
-
-.text h3 {
+.text h3{
     border: 2px solid red;
     padding: 10px 8px;
     text-align: center;
-    width: 160px;
+    width: 175px;
     position: absolute;
     left: 20px;
     top: 121px;
     color: black;
     font-size: 30px;
 }
-
-.css h3 {
-    width: 160px;
+.css h3{
+    width: 115px;
 }
-
-.js h3 {
-    width: 165px;
+.js h3{
+    width: 205px;
 }
-
-.php h3 {
-    width: 160px;
+.php h3{
+    width: 138px;
 }
-
-.family {
-    width: 100%;
-    position: relative;
+.card-container{
     background-image: url(3img/blue.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 100%;
+    height: 100%;
     background-size: cover;
-    display: inline-block;
-    margin-top: 3px;
-    border: 1px solid black;
+    background-repeat: no-repeat;
+}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 6rem 0;
 }
 
-.fam {
-    float: left;
-    width: 32%;
-    height: 400px;
-    margin-left: 10px;
-    text-align: center;
+.card-title{
+    color: rgb(0, 255, 0);
+    font-weight: 700;
+    font-size: 1.5rem;
 }
-
-.fam-img img {
-    height: 200px;
-    width: 200px;
-    border: 3px solid black;
-    border-radius: 50%;
-    margin: 10px 0;
-    box-shadow: 5px 10px;
-}
-
-.fam-name {
-    margin: 10px 0;
-    color: green;
-    font-size: 30px;
-    text-shadow: 0 2px 5px black;
-}
-
-.fam-para {
-    width: 50%;
-    position: relative;
-    left: 100px;
-    margin: 20px;
+.card-body p{
     color: white;
 }
 
-.circle {
-    width: 200px;
+.card-1, .card-2, .card-3{
+    width: 20rem;
+    text-align: center;
+    padding: 1.5rem;
+    background: transparent;
+}
+.card-img-1 img, .card-img-2 img, .card-img-3 img{
+    width: 100%;
     height: 200px;
-    background-color: lightgreen;
-    border-radius: 50%;
+    border-radius: 100%;
+    border: 5px solid black;
+    box-shadow: 5px 10px 8px rgba(0, 0, 0, 0.427);
 }
 
-.align-1 {
+.card-img-1, .card-img-2, .card-img-3{
+    position: relative;
+    text-align: center;
+    
+}
+.overlay{
     position: absolute;
-    top: 11px;
-    left: 150px;
-    z-index: 1;
-    opacity: 0.8;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    border-radius: 100%;
+    border: 5px solid black;
+    background-color: green;
+    opacity: .6;
+    transition: 250ms ease-in-out;
 }
 
-.circle {
-    width: 200px;
-    height: 200px;
-    background-color: lightgreen;
-    border-radius: 50%;
+.overlay:hover{
+    opacity: 0;
 }
-
-.align-2 {
-    position: absolute;
-    top: 11px;
-    left: 660px;
-    /* left: 750px; */
-    z-index: 1;
-    opacity: 0.8;
-}
-
-.circle {
-    width: 200px;
-    height: 200px;
-    background-color: lightgreen;
-    border-radius: 50%;
-}
-
-.align-3 {
-    position: absolute;
-    top: 11px;
-    right: 165px;
-    z-index: 1;
-    opacity: 0.8;
-}
-
-.circle:hover {
-    display: none;
-}
-
-footer {
+footer{
     background-color: rgb(239, 239, 112);
     padding: 20px;
     text-align: center;
