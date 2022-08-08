@@ -84,7 +84,7 @@
     border: 2px solid red;
     padding: 10px 8px;
     text-align: center;
-    width: 175px;
+    width: 160px;
     position: absolute;
     left: 20px;
     top: 121px;
@@ -92,13 +92,13 @@
     font-size: 30px;
 }
 .css h3{
-    width: 115px;
+    width: 160px;
 }
 .js h3{
-    width: 205px;
+    width: 160px;
 }
 .php h3{
-    width: 138px;
+    width: 155px;
 }
 .card-container{
     background-image: url(3img/blue.jpg);
