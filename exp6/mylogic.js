@@ -74,15 +74,23 @@ function stop(){
 function student() {
     var stu_obj = [
         { name: 'John', r_num: '123', dob: '20-apr-1995' },
-        { name: 'Joseph', r_num: '456', dob: '05-jan-1998' }
+        { name: 'Joseph', r_num: '456', dob: '05-jan-2005' }
     ];
 
-    for (var i = 0; i < stu_obj.length; i++) {
+    for (var i = 0; i < 1; i++) {
         var n = stu_obj[i].name;
         var r = stu_obj[i].r_num;
         var d = stu_obj[i].dob;
         var str = "<br>" + "Name: " + n + "<br>" + "Register Number: " + r + "<br>" + "Date Of Birth: " + d + "<br>";
+        document.getElementById('les').innerHTML = "Year less than 2000";
         document.getElementById('stu' + (i + 1)).innerHTML = str;
-
+    }
+    for (var i = 1; i <= 1; i++) {
+        var n = stu_obj[i].name;
+        var r = stu_obj[i].r_num;
+        var d = stu_obj[i].dob;
+        var str = "<br>" + "Name: " + n + "<br>" + "Register Number: " + r + "<br>" + "Date Of Birth: " + d + "<br>";
+        document.getElementById('gre').innerHTML = "Year greater than 2000";
+        document.getElementById('stu' + (i + 1)).innerHTML = str;
     }
 }
