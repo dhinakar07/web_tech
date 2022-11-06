@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment-8</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+    <script type="text/javascript">
+        function FrmController($scope) {
+            $scope.comment = [];
+            $scope.btn_add = function() {
+                if ($scope.txtcomment != "") {
+                    $scope.comment.push($scope.txtcomment);
+                    $scope.txtcomment = "";
+                }
+            }
+
+        };
+
+        function todoController($scope) {
+            $scope.tasks = [];
+            $scope.Add = function() {
+                if ($scope.todoTask != "") {
+                    $scope.tasks.push($scope.todoTask);
+                    $scope.todoTask = "";
+                }
+            }
+
+        };
+    </script>
+    <script type="text/javascript">
+        angular.module('CalculatorApp', [])
+            .controller('CalculatorController', function($scope) {
+                $scope.result = function() {
+                    if ($scope.operator == '+') {
+                        return $scope.a + $scope.b;
+                    }
+                    if ($scope.operator == '-') {
+                        return $scope.a - $scope.b;
+                    }
+                    if ($scope.operator == '*') {
+                        return $scope.a * $scope.b;
+                    }
+                    if ($scope.operator == '/') {
+                        return $scope.a / $scope.b;
+                    }
+                };
+            });
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: rgb(140, 207, 133);
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .navbar li {
+            list-style-type: none;
+            border: 1px solid black;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        
+        .navbar li:hover {
+            background-color: rgb(159, 189, 94);
+        }
+        
+        .navbar li a {
+            text-decoration: none;
+            font-size: 20px;
+            color: black;
+        }
+        
+        .div1 {
+            padding: 20px;
+            border: 1px solid black;
+            margin: 20px;
+            border-radius: 20px;
+            background-color: rgb(102, 191, 201);
+        }
+        
+        .reg {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body ng-app="CalculatorApp">
+    <h1 class="reg">URK20CS2019</h1>
+    <div class="div1" id="q1" ng-app="">
+        <form ng-controller="FrmController">Post Your Comment <br>
+            <textarea ng-model="txtcomment" placeholder="Your Comment" style="width:550px"></textarea><br>
+            <button ng-click="btn_add();" style="margin-top:10px;">Post Comment</button>
+            <h4>Comments</h4>
+            <ul>
+                <li ng-repeat="comnt in comment">{{comnt}}
+
+                </li>
+            </ul>
+        </form>
+    </div>
+    <div class="div1" id="q2" ng-controller="CalculatorController">
+        <h4>Calculator</h4>
+        <p><input type="number" ng-model="a"></p>
+        <p><input type="number" ng-model="b"></p>
+        <p><select ng-model="operator">
+            <option>+</option>
+            <option>*</option>
+            <option>-</option>
+            <option>/</option>
+        </select></p>
+        <p>{{ result() }}</p>
+    </div>
+    <div class="div1" id="q3" ng-controller="todoController">To-DO <br>
+        <textarea ng-model="todoTask" placeholder="tasks" style="width:550px"></textarea><br>
+        <button ng-click="Add();" style="margin-top:10px;">Add</button>
+        <h4>Tasks</h4>
+        <ul>
+            <li ng-repeat="t in tasks">{{t}}
+
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>
