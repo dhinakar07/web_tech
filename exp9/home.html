@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+    
+    <script>
+        var app = angular.module("myapp",['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider.when('/Robert',{
+                    templateUrl: "Robert.html"
+                })  
+                .when('/Chris',{
+                    templateUrl: "Chris.html"
+                })  
+        });
+    </script>
+
+</head>
+<body ng-app="myapp" style="margin-top: 50px;">
+    <h1>Student Profiles</h1>
+
+    <h3>Register Numbers:</h3>
+    <div class="links">
+        <a href="#!Robert">Robert</a>
+        <a href="#!Chris">Chris</a>
+    </div><br><br>
+    <hr>
+    <div ng-view style="margin-top: 20px;">
+        
+    </div>
+</body>
+</html>
