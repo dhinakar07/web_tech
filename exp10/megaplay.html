@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: greenyellow;
+        }
+        
+        .megaplay {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 10rem 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="megaplay">
+        <h1>Megaplay registration</h1>
+        <form action="/server" method="post">
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" name="username"></td>
+                </tr>
+                <tr>
+                    <td>Register Number:</td>
+                    <td><input type="text" name="userreg"></td>
+                </tr>
+                <tr>
+                    <td>Year Of Study</td>
+                    <td><input type="date" name="useryear"></td>
+                </tr>
+                <tr>
+                    <td>Department:</td>
+                    <td>
+                        <select name="userdept">
+                            <option value="CSE">CSE</option>
+                            <option value="ECE">ECE</option>
+                            <option value="Mech">Mech</option>
+                            <option value="Civil">Civil</option>
+                            <option value="Biotech">Biotech</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>School:</td>
+                    <td>
+                        <select name="userschool">
+                            <option value="BTech">BTech</option>
+                            <option value="MTech">MTech</option>
+                            <option value="BSc">BSc</option>
+                            <option value="Phd">Phd</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Type Of Event</td>
+                    <td>
+                        <input type="checkbox" id="musician" name="event" value="musician">
+                        <label for="musician">Musician</label><br>
+                        <input type="checkbox" id="singing" name="event" value="singing">
+                        <label for="singing">Singing</label><br>
+                        <input type="checkbox" id="choreography" name="event" value="choreography">
+                        <label for="choreography">Choreography</label><br>
+                        <input type="checkbox" id="backstage" name="event" value="backstage">
+                        <label for="backstage">Backstage</label><br>
+                        <input type="checkbox" id="finance" name="event" value="finance">
+                        <label for="finance">Finance</label><br>
+                        <input type="checkbox" id="purchase" name="event" value="purchase">
+                        <label for="purchase">Purchase</label><br>
+                        <input type="checkbox" id="volunteer" name="event" value="volunteer">
+                        <label for="volunteer">Volunteer</label><br>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button>Submit</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>
